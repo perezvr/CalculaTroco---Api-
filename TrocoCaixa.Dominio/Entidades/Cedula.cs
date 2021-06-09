@@ -5,6 +5,7 @@ namespace CaixaTroco.Dominio.Entidades
 {
     public class Cedula
     {
+        //todo Passar isso para o servico da aplicacao
         public decimal Valor { get; set; }
 
         public static List<Cedula> ObterCedulasDisponiveis()

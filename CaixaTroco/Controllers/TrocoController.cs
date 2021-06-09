@@ -1,4 +1,5 @@
 ﻿using CaixaTroco.Aplicacao.Dto.Dto;
+using CaixaTroco.Aplicacao.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -9,39 +10,17 @@ namespace CaixaTroco.Controllers
     [ApiController]
     public class TrocoController : ControllerBase
     {
-        // GET api/<TrocoController>/5
-        [HttpPost()]
-        public ActionResult<TrocoResponse> Get([FromBody] TrocoRequest request)
+        private readonly IServicoAplicacaoTroco _servicoAplicacaoTroco;
+
+        public TrocoController(IServicoAplicacaoTroco servicoAplicacaoTroco)
         {
-            return new TrocoResponse()
-            {
-                Cedulas = new System.Collections.Generic.List<CedulaDto>()
-                {
-                    new CedulaDto()
-                    {
-                        Valor = 20m,
-                        Quantidade = 2
-                    }
-                }
-            };
+            _servicoAplicacaoTroco = servicoAplicacaoTroco;
         }
 
-        //// POST api/<TrocoController>
-        //[HttpPost]
-        //public void Post([FromBody] string value)
-        //{
-        //}
-
-        //// PUT api/<TrocoController>/5
-        //[HttpPut("{id}")]
-        //public void Put(int id, [FromBody] string value)
-        //{
-        //}
-
-        //// DELETE api/<TrocoController>/5
-        //[HttpDelete("{id}")]
-        //public void Delete(int id)
-        //{
-        //}
+        [HttpPost()]
+        public ActionResult<TrocoResponse> CalcularTroco([FromBody] TrocoRequest request)
+        {
+            return _servicoAplicacaoTroco.CalcularTroco(request);
+        }
     }
 }

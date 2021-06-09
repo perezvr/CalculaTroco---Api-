@@ -1,4 +1,4 @@
-﻿namespace CaixaTroco.Aplicacao.Dto
+﻿namespace CaixaTroco.Aplicacao
 {
     public class Class1
     {

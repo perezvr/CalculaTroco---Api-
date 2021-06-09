@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaTroco.Api", "CaixaTroco\CaixaTroco.Api.csproj", "{AE3B0268-413D-4632-8D13-E0D824968B71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CaixaTroco.Api", "CaixaTroco\CaixaTroco.Api.csproj", "{AE3B0268-413D-4632-8D13-E0D824968B71}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dominio", "Dominio", "{A5AFF0CB-D1A5-4175-B793-06B93EDC1F33}"
 EndProject
@@ -13,9 +13,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aplicacao", "Aplicacao", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apresentacao", "Apresentacao", "{B006CCAC-E956-4E39-B09F-737D8271295D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaTroco.Aplicacao.Dto", "CaixaTroco.Aplicacao.Dto\CaixaTroco.Aplicacao.Dto.csproj", "{A5E0A2F5-3139-4F1E-9937-E65C2CBE5DE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CaixaTroco.Aplicacao.Dto", "CaixaTroco.Aplicacao.Dto\CaixaTroco.Aplicacao.Dto.csproj", "{A5E0A2F5-3139-4F1E-9937-E65C2CBE5DE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaTroco.Dominio", "TrocoCaixa.Dominio\CaixaTroco.Dominio.csproj", "{FE7A67EF-B805-4824-90D9-D641C8D79CD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CaixaTroco.Dominio", "TrocoCaixa.Dominio\CaixaTroco.Dominio.csproj", "{FE7A67EF-B805-4824-90D9-D641C8D79CD4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CaixaTroco.Dominio.Core", "TrocoCaixa.Dominio.Core\CaixaTroco.Dominio.Core.csproj", "{8495390B-2BC0-40AD-AD81-25F15C52442F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CaixaTroco.Dominio.Servico", "CaixaTroco.Dominio.Servico\CaixaTroco.Dominio.Servico.csproj", "{7286C589-1340-4B8E-A1E1-D94498D61C70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{D2FC0B14-C84D-4C69-84DF-78F29BA96558}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CaixaTroco.Infraestrutura.Data", "CaixaTroco.Infraestrutura.Data\CaixaTroco.Infraestrutura.Data.csproj", "{C30D52DB-513E-4562-ADF6-BB9193E1AB1A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CaixaTroco.Infraestrutura.Repositorio", "CaixaTroco.Infraestrutura.Repositorio\CaixaTroco.Infraestrutura.Repositorio.csproj", "{37FC3583-0F48-4A47-9878-3271AA80E05E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CrossCutting", "CrossCutting", "{D3669FA5-8E21-4ABD-88E1-B3F3D3C4B113}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaTroco.Infraestrutura.CrossCutting.Adapter", "CaixaTroco.Infraestrutura.CrossCutting.Adapter\CaixaTroco.Infraestrutura.CrossCutting.Adapter.csproj", "{F297A6F3-8DE2-4EB1-9107-A5E2265F5C34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaTroco.Aplicacao", "CaixaTroco.Aplicacao\CaixaTroco.Aplicacao.csproj", "{DC77EC1C-C516-457E-BB01-2EE66CFD4300}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +51,30 @@ Global
 		{FE7A67EF-B805-4824-90D9-D641C8D79CD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE7A67EF-B805-4824-90D9-D641C8D79CD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE7A67EF-B805-4824-90D9-D641C8D79CD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8495390B-2BC0-40AD-AD81-25F15C52442F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8495390B-2BC0-40AD-AD81-25F15C52442F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8495390B-2BC0-40AD-AD81-25F15C52442F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8495390B-2BC0-40AD-AD81-25F15C52442F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7286C589-1340-4B8E-A1E1-D94498D61C70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7286C589-1340-4B8E-A1E1-D94498D61C70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7286C589-1340-4B8E-A1E1-D94498D61C70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7286C589-1340-4B8E-A1E1-D94498D61C70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C30D52DB-513E-4562-ADF6-BB9193E1AB1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C30D52DB-513E-4562-ADF6-BB9193E1AB1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C30D52DB-513E-4562-ADF6-BB9193E1AB1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C30D52DB-513E-4562-ADF6-BB9193E1AB1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37FC3583-0F48-4A47-9878-3271AA80E05E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37FC3583-0F48-4A47-9878-3271AA80E05E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37FC3583-0F48-4A47-9878-3271AA80E05E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37FC3583-0F48-4A47-9878-3271AA80E05E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F297A6F3-8DE2-4EB1-9107-A5E2265F5C34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F297A6F3-8DE2-4EB1-9107-A5E2265F5C34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F297A6F3-8DE2-4EB1-9107-A5E2265F5C34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F297A6F3-8DE2-4EB1-9107-A5E2265F5C34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC77EC1C-C516-457E-BB01-2EE66CFD4300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC77EC1C-C516-457E-BB01-2EE66CFD4300}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC77EC1C-C516-457E-BB01-2EE66CFD4300}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC77EC1C-C516-457E-BB01-2EE66CFD4300}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +83,14 @@ Global
 		{AE3B0268-413D-4632-8D13-E0D824968B71} = {B006CCAC-E956-4E39-B09F-737D8271295D}
 		{A5E0A2F5-3139-4F1E-9937-E65C2CBE5DE9} = {30FD52D4-FB5E-46CD-A218-8EF5B997FBE2}
 		{FE7A67EF-B805-4824-90D9-D641C8D79CD4} = {A5AFF0CB-D1A5-4175-B793-06B93EDC1F33}
+		{8495390B-2BC0-40AD-AD81-25F15C52442F} = {A5AFF0CB-D1A5-4175-B793-06B93EDC1F33}
+		{7286C589-1340-4B8E-A1E1-D94498D61C70} = {A5AFF0CB-D1A5-4175-B793-06B93EDC1F33}
+		{D2FC0B14-C84D-4C69-84DF-78F29BA96558} = {D1460B0E-402C-4B1F-8C3B-8A568602B5ED}
+		{C30D52DB-513E-4562-ADF6-BB9193E1AB1A} = {D2FC0B14-C84D-4C69-84DF-78F29BA96558}
+		{37FC3583-0F48-4A47-9878-3271AA80E05E} = {D2FC0B14-C84D-4C69-84DF-78F29BA96558}
+		{D3669FA5-8E21-4ABD-88E1-B3F3D3C4B113} = {D1460B0E-402C-4B1F-8C3B-8A568602B5ED}
+		{F297A6F3-8DE2-4EB1-9107-A5E2265F5C34} = {D3669FA5-8E21-4ABD-88E1-B3F3D3C4B113}
+		{DC77EC1C-C516-457E-BB01-2EE66CFD4300} = {30FD52D4-FB5E-46CD-A218-8EF5B997FBE2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B00E4FC3-8CD8-4B5C-B221-A6085E939977}

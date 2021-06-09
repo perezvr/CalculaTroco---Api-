@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CaixaTroco.Infraestrutura.Data\CaixaTroco.Infraestrutura.Data.csproj" />
+    <ProjectReference Include="..\TrocoCaixa.Dominio.Core\CaixaTroco.Dominio.Core.csproj" />
+  </ItemGroup>
+
+</Project>
