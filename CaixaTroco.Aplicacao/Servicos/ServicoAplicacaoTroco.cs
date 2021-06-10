@@ -3,6 +3,8 @@ using CaixaTroco.Aplicacao.Interfaces;
 using CaixaTroco.Dominio;
 using CaixaTroco.Dominio.Core.Interfaces.Servicos;
 using CaixaTroco.Dominio.Entidades;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace CaixaTroco.Aplicacao.Servicos
 {
@@ -18,13 +20,13 @@ namespace CaixaTroco.Aplicacao.Servicos
             _servicoTransacao = servicoTransacao;
         }
 
-        public TrocoResponse CalcularTroco(TrocoRequest request)
+        public async Task<TrocoResponse> CalcularTrocoAsync(TrocoRequest request)
         {
             ValidarRequest(request);
 
             var transacao = CriarTransacao(request);
 
-            _servicoTransacao.Add(transacao);
+            await _servicoTransacao.AddAsync(transacao);
 
             return CriarResposta(transacao);
         }
@@ -47,6 +49,9 @@ namespace CaixaTroco.Aplicacao.Servicos
         private TrocoResponse CriarResposta(Transacao transacao)
         {
             var response = new TrocoResponse();
+
+            response.ValorTroco = transacao.Cedulas
+                .Sum(c => c.Valor * c.Quantidade);
 
             foreach (var item in transacao.Cedulas)
                 response.Cedulas.Add(new CedulaDto() { Quantidade = item.Quantidade, Valor = item.Valor });

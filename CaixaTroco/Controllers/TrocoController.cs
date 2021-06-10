@@ -4,6 +4,7 @@ using CaixaTroco.Dominio;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Threading.Tasks;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -21,11 +22,11 @@ namespace CaixaTroco.Controllers
         }
 
         [HttpPost()]
-        public ActionResult<TrocoResponse> CalcularTroco([FromBody] TrocoRequest request)
+        public async Task<ActionResult<TrocoResponse>> CalcularTroco([FromBody] TrocoRequest request)
         {
             try
             {
-                return Ok(_servicoAplicacaoTroco.CalcularTroco(request));
+                return StatusCode(StatusCodes.Status201Created, await _servicoAplicacaoTroco.CalcularTrocoAsync(request));
             }
             catch (NegocioException ex)
             {

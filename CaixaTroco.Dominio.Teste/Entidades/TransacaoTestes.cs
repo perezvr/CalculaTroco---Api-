@@ -19,7 +19,6 @@ namespace CaixaTroco.Dominio.Teste.Entidades
             {
                 Transacao transacao = Transacao.Criar(0, 0.01m);
                 Assert.Fail();
-
             }
             catch (System.Exception)
             {

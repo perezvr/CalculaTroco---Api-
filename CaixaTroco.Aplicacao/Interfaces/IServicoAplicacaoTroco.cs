@@ -1,9 +1,10 @@
 ﻿using CaixaTroco.Aplicacao.Dto.Dto;
+using System.Threading.Tasks;
 
 namespace CaixaTroco.Aplicacao.Interfaces
 {
     public interface IServicoAplicacaoTroco
     {
-        TrocoResponse CalcularTroco(TrocoRequest request);
+        Task<TrocoResponse> CalcularTrocoAsync(TrocoRequest request);
     }
 }

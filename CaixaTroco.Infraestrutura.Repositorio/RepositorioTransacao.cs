@@ -4,6 +4,7 @@ using CaixaTroco.Infraestrutura.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace CaixaTroco.Infraestrutura.Repositorio
 {
@@ -18,10 +19,10 @@ namespace CaixaTroco.Infraestrutura.Repositorio
             DbSet = _context.Set<Transacao>();
         }
 
-        public void Add(Transacao transacao)
+        public async Task AddAsync(Transacao transacao)
         {
-            DbSet.Add(transacao);
-            _context.SaveChanges();
+            await DbSet.AddAsync(transacao);
+            await _context.SaveChangesAsync();
         }
 
         public IEnumerable<Transacao> ObterTransacoes()

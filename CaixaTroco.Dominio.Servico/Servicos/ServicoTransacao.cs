@@ -2,6 +2,7 @@
 using CaixaTroco.Dominio.Core.Interfaces.Servicos;
 using CaixaTroco.Dominio.Entidades;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace CaixaTroco.Dominio.Servico.Servicos
 {
@@ -14,9 +15,9 @@ namespace CaixaTroco.Dominio.Servico.Servicos
             _repositorioTransacao = repositorioTransacao;
         }
 
-        public Transacao Add(Transacao transacao)
+        public async Task<Transacao> AddAsync(Transacao transacao)
         {
-            _repositorioTransacao.Add(transacao);
+            await _repositorioTransacao.AddAsync(transacao);
             return transacao;
         }
 
