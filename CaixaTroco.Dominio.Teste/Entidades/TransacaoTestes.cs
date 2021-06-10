@@ -1,7 +1,7 @@
 using CaixaTroco.Dominio.Entidades;
 using NUnit.Framework;
 
-namespace CaixaTroco.Dominio.Teste
+namespace CaixaTroco.Dominio.Teste.Entidades
 {
     public class TransacaoTestes
     {

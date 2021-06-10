@@ -41,25 +41,11 @@ namespace CaixaTroco.Dominio.Teste.Entidades
         }
 
         [Test]
-        public void NaoDeveCriarUmaTransacaoCedulaComQuantidadeInvalida()
-        {
-            try
-            {
-                TransacaoCedula cedula = TransacaoCedula.Criar(0, 0.01m);
-                Assert.Fail();
-            }
-            catch (System.Exception)
-            {
-                Assert.Pass();
-            }
-        }
-
-        [Test]
         public void NaoDeveCriarUmaTransacaoCedulaComValorInvalido()
         {
             try
             {
-                TransacaoCedula cedula = TransacaoCedula.Criar(1, 0);
+                TransacaoCedula cedula = TransacaoCedula.Criar(1, 10000);
                 Assert.Fail();
             }
             catch (System.Exception)
