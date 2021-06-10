@@ -29,9 +29,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CaixaTroco.Infraestrutura.R
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CrossCutting", "CrossCutting", "{D3669FA5-8E21-4ABD-88E1-B3F3D3C4B113}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaTroco.Infraestrutura.CrossCutting.Adapter", "CaixaTroco.Infraestrutura.CrossCutting.Adapter\CaixaTroco.Infraestrutura.CrossCutting.Adapter.csproj", "{F297A6F3-8DE2-4EB1-9107-A5E2265F5C34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CaixaTroco.Infraestrutura.CrossCutting.Adapter", "CaixaTroco.Infraestrutura.CrossCutting.Adapter\CaixaTroco.Infraestrutura.CrossCutting.Adapter.csproj", "{F297A6F3-8DE2-4EB1-9107-A5E2265F5C34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaTroco.Aplicacao", "CaixaTroco.Aplicacao\CaixaTroco.Aplicacao.csproj", "{DC77EC1C-C516-457E-BB01-2EE66CFD4300}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CaixaTroco.Aplicacao", "CaixaTroco.Aplicacao\CaixaTroco.Aplicacao.csproj", "{DC77EC1C-C516-457E-BB01-2EE66CFD4300}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaTroco.Dominio.Teste", "CaixaTroco.Dominio.Teste\CaixaTroco.Dominio.Teste.csproj", "{9375D0E9-3FE3-4986-B0AA-F9F9EED9105C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{DC77EC1C-C516-457E-BB01-2EE66CFD4300}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC77EC1C-C516-457E-BB01-2EE66CFD4300}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC77EC1C-C516-457E-BB01-2EE66CFD4300}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9375D0E9-3FE3-4986-B0AA-F9F9EED9105C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9375D0E9-3FE3-4986-B0AA-F9F9EED9105C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9375D0E9-3FE3-4986-B0AA-F9F9EED9105C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9375D0E9-3FE3-4986-B0AA-F9F9EED9105C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -91,6 +97,7 @@ Global
 		{D3669FA5-8E21-4ABD-88E1-B3F3D3C4B113} = {D1460B0E-402C-4B1F-8C3B-8A568602B5ED}
 		{F297A6F3-8DE2-4EB1-9107-A5E2265F5C34} = {D3669FA5-8E21-4ABD-88E1-B3F3D3C4B113}
 		{DC77EC1C-C516-457E-BB01-2EE66CFD4300} = {30FD52D4-FB5E-46CD-A218-8EF5B997FBE2}
+		{9375D0E9-3FE3-4986-B0AA-F9F9EED9105C} = {A5AFF0CB-D1A5-4175-B793-06B93EDC1F33}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B00E4FC3-8CD8-4B5C-B221-A6085E939977}

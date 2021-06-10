@@ -21,6 +21,6 @@ namespace CaixaTroco.Dominio.Servico.Servicos
         }
 
         public IEnumerable<Transacao> ObterTransacoes()
-         => _repositorioTransacao.ObterTransacoes();
+            => _repositorioTransacao.ObterTransacoes();
     }
 }

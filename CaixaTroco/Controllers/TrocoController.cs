@@ -1,6 +1,9 @@
 ﻿using CaixaTroco.Aplicacao.Dto.Dto;
 using CaixaTroco.Aplicacao.Interfaces;
+using CaixaTroco.Dominio;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -20,7 +23,18 @@ namespace CaixaTroco.Controllers
         [HttpPost()]
         public ActionResult<TrocoResponse> CalcularTroco([FromBody] TrocoRequest request)
         {
-            return _servicoAplicacaoTroco.CalcularTroco(request);
+            try
+            {
+                return Ok(_servicoAplicacaoTroco.CalcularTroco(request));
+            }
+            catch (NegocioException ex)
+            {
+                return UnprocessableEntity(new { message = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new { message = ex.Message });
+            }
         }
     }
 }
