@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CaixaTroco.Api.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20210609035223_initial")]
+    [Migration("20210611015729_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -36,7 +36,7 @@ namespace CaixaTroco.Api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Transacoes");
+                    b.ToTable("Transacao");
                 });
 
             modelBuilder.Entity("CaixaTroco.Dominio.Entidades.TransacaoCedula", b =>
@@ -59,7 +59,7 @@ namespace CaixaTroco.Api.Migrations
 
                     b.HasIndex("TransacaoId");
 
-                    b.ToTable("TransacaoCedulas");
+                    b.ToTable("TransacaoCedula");
                 });
 
             modelBuilder.Entity("CaixaTroco.Dominio.Entidades.TransacaoCedula", b =>

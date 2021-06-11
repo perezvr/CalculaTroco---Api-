@@ -7,7 +7,7 @@ namespace CaixaTroco.Api.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Transacoes",
+                name: "Transacao",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -17,11 +17,11 @@ namespace CaixaTroco.Api.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Transacoes", x => x.Id);
+                    table.PrimaryKey("PK_Transacao", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "TransacaoCedulas",
+                name: "TransacaoCedula",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -32,28 +32,28 @@ namespace CaixaTroco.Api.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TransacaoCedulas", x => x.Id);
+                    table.PrimaryKey("PK_TransacaoCedula", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_TransacaoCedulas_Transacoes_TransacaoId",
+                        name: "FK_TransacaoCedula_Transacao_TransacaoId",
                         column: x => x.TransacaoId,
-                        principalTable: "Transacoes",
+                        principalTable: "Transacao",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_TransacaoCedulas_TransacaoId",
-                table: "TransacaoCedulas",
+                name: "IX_TransacaoCedula_TransacaoId",
+                table: "TransacaoCedula",
                 column: "TransacaoId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "TransacaoCedulas");
+                name: "TransacaoCedula");
 
             migrationBuilder.DropTable(
-                name: "Transacoes");
+                name: "Transacao");
         }
     }
 }

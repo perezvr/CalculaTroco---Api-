@@ -7,6 +7,6 @@ namespace CaixaTroco.Dominio.Core.Interfaces.Repositorios
     public interface IRepositorioTransacao
     {
         Task AddAsync(Transacao transacao);
-        IEnumerable<Transacao> ObterTransacoes();
+        Task<IEnumerable<Transacao>> ObterTransacoesAsync();
     }
 }

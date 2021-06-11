@@ -30,8 +30,22 @@ namespace CaixaTroco.Dominio.Entidades
             Validar();
         }
 
+        private Transacao(int id, decimal valorTotal, decimal valorPago)
+        {
+            Id = id;
+            ValorTotal = valorTotal;
+            ValorPago = valorPago;
+
+            Cedulas = new List<TransacaoCedula>();
+
+            Validar();
+        }
+
         public static Transacao Criar(decimal valorTotal, decimal valorPago)
             => new Transacao(valorTotal, valorPago);
+
+        public static Transacao Criar(int id, decimal valorTotal, decimal valorPago)
+            => new Transacao(id, valorTotal, valorPago);
 
         public void AdicionarCedulas(TransacaoCedula transacaoCedula)
             => Cedulas.Add(transacaoCedula);

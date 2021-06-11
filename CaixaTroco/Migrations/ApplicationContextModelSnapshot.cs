@@ -34,7 +34,7 @@ namespace CaixaTroco.Api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Transacoes");
+                    b.ToTable("Transacao");
                 });
 
             modelBuilder.Entity("CaixaTroco.Dominio.Entidades.TransacaoCedula", b =>
@@ -57,7 +57,7 @@ namespace CaixaTroco.Api.Migrations
 
                     b.HasIndex("TransacaoId");
 
-                    b.ToTable("TransacaoCedulas");
+                    b.ToTable("TransacaoCedula");
                 });
 
             modelBuilder.Entity("CaixaTroco.Dominio.Entidades.TransacaoCedula", b =>

@@ -21,7 +21,7 @@ namespace CaixaTroco.Dominio.Servico.Servicos
             return transacao;
         }
 
-        public IEnumerable<Transacao> ObterTransacoes()
-            => _repositorioTransacao.ObterTransacoes();
+        public async Task<IEnumerable<Transacao>> ObterTransacoesAsync()
+            => await _repositorioTransacao.ObterTransacoesAsync();
     }
 }

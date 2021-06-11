@@ -2,7 +2,7 @@
 
 namespace CaixaTroco.Infraestrutura.Data.Interfaces
 {
-    public interface IDataService
+    public interface IEFCoreDataService
     {
         public void InitializeDB(IServiceProvider serviceProvider);
     }

@@ -39,6 +39,7 @@ namespace CaixaTroco
 
             services.AddTransient<IServicoCedula, ServicoCedula>();
 
+
             //services.AddTransient<IUserMapper, UserMapper>();
 
             services.AddDbContext<ApplicationContext>(options =>
@@ -48,7 +49,8 @@ namespace CaixaTroco
                 )
             );
 
-            services.AddTransient<IDataService, DataService>();
+            services.AddTransient<IEFCoreDataService, EFCoreDataService>();
+            services.AddSingleton<IDbDataService, DbDataService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -77,7 +79,7 @@ namespace CaixaTroco
                 endpoints.MapControllers();
             });
 
-            var dataservice = serviceProvider.GetRequiredService<IDataService>();
+            var dataservice = serviceProvider.GetRequiredService<IEFCoreDataService>();
             dataservice.InitializeDB(serviceProvider);
         }
     }

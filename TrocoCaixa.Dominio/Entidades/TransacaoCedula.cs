@@ -16,6 +16,8 @@ namespace CaixaTroco.Dominio.Entidades
         [Column(TypeName = "decimal(6,2)")]
         public decimal Valor { get; private set; }
 
+        public int TransacaoId { get; set; }
+
         private TransacaoCedula(int quantidade, decimal valor)
         {
             Quantidade = quantidade;
@@ -24,8 +26,21 @@ namespace CaixaTroco.Dominio.Entidades
             Validar();
         }
 
+        private TransacaoCedula(int id, int quantidade, decimal valor, int transacaoId)
+        {
+            Id = id;
+            Quantidade = quantidade;
+            Valor = valor;
+            TransacaoId = transacaoId;
+
+            Validar();
+        }
+
         public static TransacaoCedula Criar(int quantidade, decimal valor)
             => new TransacaoCedula(quantidade, valor);
+
+        public static TransacaoCedula Criar(int id, int quantidade, decimal valor, int transacaoId)
+            => new TransacaoCedula(id, quantidade, valor, transacaoId);
 
         public bool Validar()
         {

@@ -8,7 +8,7 @@ namespace CaixaTroco.Infraestrutura.Data
         public ApplicationContext(DbContextOptions options)
            : base(options) { }
 
-        public DbSet<Transacao> Transacoes { get; set; }
-        public DbSet<TransacaoCedula> TransacaoCedulas { get; set; }
+        public DbSet<Transacao> Transacao { get; set; }
+        public DbSet<TransacaoCedula> TransacaoCedula { get; set; }
     }
 }

@@ -5,7 +5,7 @@ using System;
 
 namespace CaixaTroco.Infraestrutura.Data
 {
-    public class DataService : IDataService
+    public class EFCoreDataService : IEFCoreDataService
     {
         public void InitializeDB(IServiceProvider serviceProvider)
         {
