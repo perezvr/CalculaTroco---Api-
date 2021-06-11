@@ -28,8 +28,6 @@ namespace CaixaTroco.Aplicacao.Servicos
 
             await _servicoTransacao.AddAsync(transacao);
 
-            var x = await _servicoTransacao.ObterTransacoesAsync();
-
             return CriarResposta(transacao);
         }
 

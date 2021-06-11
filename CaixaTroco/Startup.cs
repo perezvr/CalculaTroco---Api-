@@ -25,7 +25,6 @@ namespace CaixaTroco
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSwaggerGen();
@@ -33,14 +32,12 @@ namespace CaixaTroco
             services.AddControllers();
 
             services.AddTransient<IServicoAplicacaoTroco, ServicoAplicacaoTroco>();
+            services.AddTransient<IServicoAplicacaoTransacao, ServicoAplicacaoTransacao>();
 
             services.AddTransient<IServicoTransacao, ServicoTransacao>();
             services.AddTransient<IRepositorioTransacao, RepositorioTransacao>();
 
             services.AddTransient<IServicoCedula, ServicoCedula>();
-
-
-            //services.AddTransient<IUserMapper, UserMapper>();
 
             services.AddDbContext<ApplicationContext>(options =>
                 options.UseSqlServer(
@@ -53,7 +50,6 @@ namespace CaixaTroco
             services.AddSingleton<IDbDataService, DbDataService>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider)
         {
             if (env.IsDevelopment())

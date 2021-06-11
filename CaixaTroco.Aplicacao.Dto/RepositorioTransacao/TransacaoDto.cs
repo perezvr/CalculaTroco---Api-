@@ -8,5 +8,10 @@ namespace CaixaTroco.Aplicacao.Dto.RepositorioTransacao
         public decimal ValorTotal { get; set; }
         public decimal ValorPago { get; set; }
         public List<TransacaoCedulaDto> Cedulas { get; set; }
+
+        public TransacaoDto()
+        {
+            Cedulas = new List<TransacaoCedulaDto>();
+        }
     }
 }

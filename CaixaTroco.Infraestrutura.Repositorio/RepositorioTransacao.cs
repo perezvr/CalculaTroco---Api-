@@ -36,11 +36,20 @@ namespace CaixaTroco.Infraestrutura.Repositorio
 
         public async Task<IEnumerable<Transacao>> ObterTransacoesAsync()
         {
-            string sql = @"SELECT *
-                           FROM Transacao";
+            string sql = @"SELECT 
+                               Id,
+                               ValorTotal,          
+                               ValorPago
+                           FROM 
+                               Transacao";
 
-            string sqlCedulas = @"SELECT *
-                           FROM TransacaoCedula";
+            string sqlCedulas = @"SELECT 
+                                      Id,
+                                      Quantidade,
+                                      Valor,
+                                      TransacaoId
+                                  FROM 
+                                      TransacaoCedula";
 
             var transacoes = new List<Transacao>();
             var cedulas = new List<TransacaoCedula>();
@@ -51,8 +60,8 @@ namespace CaixaTroco.Infraestrutura.Repositorio
                 {
                     conexao.Open();
 
-                    var transacoesDto = await conexao.QueryAsync<TransacaoDto>(sql);
-                    var cedulasDto = await conexao.QueryAsync<TransacaoCedulaDto>(sqlCedulas);
+                    var transacoesDto = await conexao.QueryAsync<TransacaoDto>(Queries.ObterTodasTransacoes);
+                    var cedulasDto = await conexao.QueryAsync<TransacaoCedulaDto>(Queries.ObterTodasTransacoesCedulas);
 
                     foreach (var item in cedulasDto.ToList())
                         cedulas.Add(TransacaoCedula.Criar(item.Id, item.Quantidade, item.Valor, item.TransacaoId));

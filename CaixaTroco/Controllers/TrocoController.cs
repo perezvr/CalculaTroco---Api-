@@ -22,7 +22,7 @@ namespace CaixaTroco.Controllers
         }
 
         [HttpPost()]
-        public async Task<ActionResult<TrocoResponse>> CalcularTroco([FromBody] TrocoRequest request)
+        public async Task<ActionResult<TrocoResponse>> CalcularTrocoAsync([FromBody] TrocoRequest request)
         {
             try
             {
