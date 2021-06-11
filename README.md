@@ -4,8 +4,8 @@ Projeto desenvolvido para estudo das tecnologias .Net implementadas em um projet
 
 ## Direttrizes
 
-Foi utilizado **DDD** como padrão de desenvolvimento de projeto.
-Mapeamento, migração de entidades(codeFirst) e inserção de dados gerenciada pelo **EFCore**.
-Consultas (queries) utilizando **Dapper** como MicroORM.
-Versionamento de Api gerenciado pelo **Swagger**.
-Testes unitários pela bibliteca **NUnit**.
+Foi utilizado **DDD** como padrão de desenvolvimento de projeto.<br/>
+Mapeamento, migração de entidades(codeFirst) e inserção de dados gerenciada pelo **EFCore**.<br/>
+Consultas (queries) utilizando **Dapper** como MicroORM.<br/>
+Versionamento de Api gerenciado pelo **Swagger**.<br/>
+Testes unitários pela bibliteca **NUnit**.<br/>
