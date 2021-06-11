@@ -1,4 +1,4 @@
-# .NetCore WebApi - CaixaTroco
+# .NetCore WebApi - CalculaTroco
 
 Projeto desenvolvido para estudo das tecnologias .Net implementadas em um projeto WebApi.
 
