@@ -9,4 +9,4 @@ Projeto desenvolvido para estudo das tecnologias .Net implementadas em um projet
 * Mapeamento, migração de entidades(codeFirst) e inserção de dados gerenciada pelo **EFCore**.<br/>
 * Consultas (queries) utilizando **Dapper** como MicroORM.<br/>
 * Versionamento de Api gerenciado pelo **Swagger**.<br/>
-* Testes unitários pela bibliteca **NUnit**.<br/>
+* Testes unitários pela biblioteca **NUnit**.<br/>
